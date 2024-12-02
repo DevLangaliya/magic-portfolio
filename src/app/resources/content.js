@@ -1,19 +1,19 @@
 import { InlineCode } from "@/once-ui/components";
 
 const person = {
-    firstName: 'Selene',
-    lastName:  'Yu',
+    firstName: 'Dev',
+    lastName:  'Langaliya',
     get name() {
         return `${this.firstName} ${this.lastName}`;
     },
-    role:      'Design Engineer',
+    role:      'Student',
     avatar:    '/images/avatar.jpg',
-    location:  'Asia/Jakarta',        // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
-    languages: ['English', 'Bahasa']  // optional: Leave the array empty if you don't want to display languages
+    location:  'Champaign, Illinois',        // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
+    languages: ['English']  // optional: Leave the array empty if you don't want to display languages
 }
 
 const newsletter = {
-    display: true,
+    display: false,
     title: <>Subscribe to {person.firstName}'s Newsletter</>,
     description: <>I occasionally write about design, technology, and share thoughts on the intersection of creativity and engineering.</>
 }
@@ -24,22 +24,17 @@ const social = [
     {
         name: 'GitHub',
         icon: 'github',
-        link: 'https://github.com/once-ui-system/nextjs-starter',
+        link: 'https://github.com/DevLangaliya',
     },
     {
         name: 'LinkedIn',
         icon: 'linkedin',
-        link: 'https://www.linkedin.com/company/once-ui/',
-    },
-    {
-        name: 'X',
-        icon: 'x',
-        link: '',
+        link: 'https://www.linkedin.com/in/dev-langaliya/',
     },
     {
         name: 'Email',
         icon: 'email',
-        link: 'mailto:example@gmail.com',
+        link: 'mailto:devl2@illinois.edu',
     },
 ]
 
@@ -47,8 +42,8 @@ const home = {
     label: 'Home',
     title: `${person.name}'s Portfolio`,
     description: `Portfolio website showcasing my work as a ${person.role}`,
-    headline: <>Design engineer and builder</>,
-    subline: <>I'm Selene, a design engineer at <InlineCode>FLY</InlineCode>, where I craft intuitive<br/> user experiences. After hours, I build my own projects.</>
+    headline: <>Dev Langaliya<br /><br /></>,
+    subline: <>I'm a Student at the University of Illinois Urbana-Champaign, where I am studying<br /> Statistics and Computer Science.</>
 }
 
 const about = {
@@ -60,45 +55,48 @@ const about = {
         subItems: false
     },
     avatar: {
-        display: true
+        display: false
     },
     calendar: {
-        display: true,
+        display: false,
         link: 'https://cal.com'
     },
     intro: {
         display: true,
         title: 'Introduction',
-        description: <>Selene is a Jakarta-based design engineer with a passion for transforming complex challenges into simple, elegant design solutions. Her work spans digital interfaces, interactive experiences, and the convergence of design and technology.</>
+        description: <>I'm {person.name}, a {person.role} from {person.location}.</>
     },
     work: {
         display: true, // set to false to hide this section
         title: 'Work Experience',
         experiences: [
             {
-                company: 'FLY',
-                timeframe: '2022 - Present',
-                role: 'Senior Design Engineer',
+                company: 'Motorola Solutions',
+                timeframe: 'May 2025 - August 2025',
+                role: 'AI Solution Engineer Intern',
                 achievements: [
-                    <>Redesigned the UI/UX for the FLY platform, resulting in a 20% increase in user engagement and 30% faster load times.</>,
-                    <>Spearheaded the integration of AI tools into design workflows, enabling designers to iterate 50% faster.</>
+                    <>Selected to collaborate with Motorola Solutions IT team to support technology initiatives.</>,
                 ],
-                images: [ // optional: leave the array empty if you don't want to display images
-                    {
-                        src: '/images/projects/project-01/cover-01.jpg',
-                        alt: 'Once UI Project',
-                        width: 16,
-                        height: 9
-                    }
-                ]
+                images: [ ]
             },
             {
-                company: 'Creativ3',
-                timeframe: '2018 - 2022',
-                role: 'Lead Designer',
+                company: 'Fantasy Trading Room',
+                timeframe: 'September 2024 - December 2024',
+                role: 'Student Mobile Developer',
                 achievements: [
-                    <>Developed a design system that unified the brand across multiple platforms, improving design consistency by 40%.</>,
-                    <>Led a cross-functional team to launch a new product line, contributing to a 15% increase in overall company revenue.</>
+                    <>Collaborated with a team of 6 to design, develop, and launch a mobile interface for fftradingroom.com.</>,
+                    <>Integrated 2 new features with existing APIs for seamless interaction with trade data across iOS and Android devices.</>
+                ],
+                images: [ ]
+            },
+            {
+                company: 'Motorola Solutions',
+                timeframe: 'May 2024 - August 2024',
+                role: 'Data Science Intern',
+                achievements: [
+                    <>Engineered a full stack web tool to manage a catalog of 1,000+ tables, with RESTful APIs for real-time data access and updates.</>,
+                    <>Trained a predictive model with 86% accuracy on 7,000+ queries to estimate query run time, delivering actionable insights to
+                        support corporate decisions.</>
                 ],
                 images: [ ]
             }
@@ -109,12 +107,8 @@ const about = {
         title: 'Studies',
         institutions: [
             {
-                name: 'University of Jakarta',
-                description: <>Studied software engineering.</>,
-            },
-            {
-                name: 'Build the Future',
-                description: <>Studied online marketing and personal branding.</>,
+                name: 'University of Illinois Urbana-Champaign',
+                description: <>B.S. in Statistics, Minor in Computer Science | GPA: 3.54/4.0</>,
             }
         ]
     },
@@ -123,34 +117,19 @@ const about = {
         title: 'Technical skills',
         skills: [
             {
-                title: 'Figma',
-                description: <>Able to prototype in Figma with Once UI with unnatural speed.</>,
-                images: [
-                    {
-                        src: '/images/projects/project-01/cover-02.jpg',
-                        alt: 'Project image',
-                        width: 16,
-                        height: 9
-                    },
-                    {
-                        src: '/images/projects/project-01/cover-03.jpg',
-                        alt: 'Project image',
-                        width: 16,
-                        height: 9
-                    },
-                ]
+                title: 'Programming Languages',
+                description: <>Python, TypeScript, JavaScript, SQL, R, Swift, C++, Java</>,
+                images: []
             },
             {
-                title: 'Next.js',
-                description: <>Building next gen apps with Next.js + Once UI + Supabase.</>,
-                images: [
-                    {
-                        src: '/images/projects/project-01/cover-04.jpg',
-                        alt: 'Project image',
-                        width: 16,
-                        height: 9
-                    },
-                ]
+                title: 'Frameworks & Libraries',
+                description: <>React Native, Flask, scikit-learn, pandas, NumPy, Matplotlib, Hugging Face, React</>,
+                images: []
+            },
+            {
+                title: 'Developer Tools',
+                description: <>Git, Docker, VS Code, AWS Redshift, RESTful APIs, PostgreSQL, Supabase</>,
+                images: []
             }
         ]
     }
